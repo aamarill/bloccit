@@ -7,22 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'random_data'
 
-counter = 0
-
 50.times do
-	counter += 1
-	if counter == 1 || counter % 5 == 0
-		Post.create!(
-			title: "SPAM",
-			body:  RandomData.random_paragraph
-		)
 
-	else
 		Post.create!(
 			title: RandomData.random_sentence,
 			body:  RandomData.random_paragraph
 		)
-	end
 end
 
 posts = Post.all
