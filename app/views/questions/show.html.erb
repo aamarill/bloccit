@@ -5,7 +5,12 @@
         <p><%= @question.body %></p>
         <p>
             <%= "Has question been resolved?" %>
-            <%=check_box("question","resolved",{}, checked_value = true, unchecked_value = false ) %>
+            <%= if @question.resolved == true
+                    "Yes!"
+                else
+                     "No :("
+                end
+            %>
         </p>
 
     </div>
