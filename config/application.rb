@@ -28,5 +28,10 @@ module Bloccit
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # To solve:
+    # "unable to convert unpermitted parameters to hash"
+    #
+    config.action_controller.permit_all_parameters = true
   end
 end
