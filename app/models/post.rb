@@ -10,4 +10,12 @@ class Post < ApplicationRecord
 	validates :body,  length: {minimum: 20}, presence: true
 	validates :topic , presence: true
 	validates :user, presence: true
+
+	def self.ordered_by_reverse_created_at
+		order('created_at ASC')
+	end
+
+	def self.ordered_by_title
+		order('title DESC')
+	end
 end
