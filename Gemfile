@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
  git_source(:github) do |repo_name|
-   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-   "https://github.com/#{repo_name}.git"
+    repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+    "https://github.com/#{repo_name}.git"
  end
 
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -10,15 +10,15 @@ source 'https://rubygems.org'
 
  # #1
  group :production do
-   # Use pg as the production database for Active Record
-   gem 'pg'
-   gem 'rails_12factor'
+    # Use pg as the production database for Active Record
+    gem 'pg'
+    gem 'rails_12factor'
  end
 
  # #2
  group :development do
-   # Use sqlite3 as the development database for Active Record
-   gem 'sqlite3'
+    # Use sqlite3 as the development database for Active Record
+    gem 'sqlite3'
  end
 
  # Use Puma as the app server
@@ -38,14 +38,14 @@ source 'https://rubygems.org'
  gem 'thor', '0.19.1'
 
  group :development do
-   gem 'listen', '~> 3.0.5'
+    gem 'listen', '~> 3.0.5'
  end
 
 group :development, :test do
-   gem 'rspec-rails', '~> 3.0'
-   gem 'rails-controller-testing'
-   gem 'shoulda'
-
+    gem 'rspec-rails', '~> 3.0'
+    gem 'rails-controller-testing'
+    gem 'shoulda'
+    gem 'factory_girl_rails', '~> 4.0'
 end
 
 gem "bootstrap-sass"
